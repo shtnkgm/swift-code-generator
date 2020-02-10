@@ -1,5 +1,3 @@
-// https://eslint.org/docs/user-guide/configuring
-
 module.exports = {
   root: true,
   parserOptions: {
@@ -8,7 +6,7 @@ module.exports = {
   env: {
     browser: true
   },
-  extends: ["plugin:vue/essential", "standard"],
+  extends: ["standard", "plugin:vue/essential", 'plugin:prettier/recommended'],
   plugins: ["vue"],
   // add your custom rules here
   rules: {
@@ -22,7 +20,7 @@ module.exports = {
         semi: false,
         singleQuote: true,
         trailingComma: "es5"
-      }
+      },
     ],
-  }
+  },
 };
