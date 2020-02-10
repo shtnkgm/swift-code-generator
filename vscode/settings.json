@@ -7,6 +7,8 @@
       "language": "vue"
     }
   ],
-  "prettier.eslintIntegration": true,
   "eslint.autoFixOnSave": true,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
 }
