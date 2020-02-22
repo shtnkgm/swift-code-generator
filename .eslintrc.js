@@ -1,26 +1,29 @@
 module.exports = {
   root: true,
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: "babel-eslint"
+    parser: 'babel-eslint',
+    sourceType: 'module',
   },
   env: {
-    browser: true
+    browser: true,
+    node: true,
   },
-  extends: ["standard", "plugin:vue/essential", 'plugin:prettier/recommended'],
-  plugins: ["vue"],
+  extends: [
+    'eslint:recommended',
+    'plugin:prettier/recommended',
+    'plugin:vue/recommended',
+    'prettier/vue'
+  ],
+  plugins: ["vue", "prettier"],
   // add your custom rules here
   rules: {
-    // allow async-await
+    'no-plusplus': 'off',
+    'func-names': 'off',
     "generator-star-spacing": "off",
-    // allow debugger during development
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
-    "prettier/prettier": [
-      "error",
-      {
-        semi: false,
-        singleQuote: true,
-        trailingComma: "es5"
-      },
-    ],
-  },
+    "no-console": "off",
+    "no-unused-labels": 1,
+    "linebreak-style": "off"
+  }
 };
